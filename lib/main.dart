@@ -93,7 +93,9 @@ class _MyHomePageState extends State<MyHomePage> {
             colors: [
               Colors.blue.shade500,
               Colors.red.shade100
-            ]
+            ], 
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           )
         ),
         child: const Center(
