@@ -99,7 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ),
         child: const Center(
-          child: Text('hello world'),
+          child: Text('hello world', 
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 28
+          ),
+          ),
           
         ),
       )
