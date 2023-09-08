@@ -86,9 +86,20 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: Text('hello world'),
-        
+      body: Container(
+
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.blue.shade500,
+              Colors.red.shade100
+            ]
+          )
+        ),
+        child: const Center(
+          child: Text('hello world'),
+          
+        ),
       )
 
       // This trailing comma makes auto-formatting nicer for build methods.
