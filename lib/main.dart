@@ -77,39 +77,40 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Container(
+        appBar: AppBar(
+          // TRY THIS: Try changing the color here to a specific color (to
+          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+          // change color while the other colors stay the same.
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: GradientContainer()
 
-        decoration: BoxDecoration(
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
+  }
+}
+
+class GradientContainer extends StatelessWidget {
+  @override
+  //in below, the name before of the function build is the return type, which is widget in this case.
+  Widget build(BuildContext context) {
+    // below will be the body of the build function which is to be returned.
+    return Container(
+      decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Colors.blue.shade500,
-              Colors.red.shade100
-            ], 
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          )
+        colors: [Colors.blue.shade500, Colors.red.shade100],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      )),
+      child: const Center(
+        child: Text(
+          'hello Kalyan',
+          style: TextStyle(color: Colors.red, fontSize: 28),
         ),
-        child: const Center(
-          child: Text('hello world', 
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 28
-          ),
-          ),
-          
-        ),
-      )
-
-      // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
