@@ -13,9 +13,7 @@ class GradientContainer extends StatelessWidget {
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       )),
-      child: const Center(
-        child: StyledText()
-      ),
+      child: Center(child: StyledText('Hello Kalyan Bikram.')),
     );
   }
 }
