@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: GradientContainer(Colors.blue, Colors.green)
+        body: Image.asset('assets/images/dice-1.png', width: 50)
 
         // This trailing comma makes auto-formatting nicer for build methods.
         );
