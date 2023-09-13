@@ -15,8 +15,13 @@ class Start_Screen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          //setting transparency
+          // way one is using opactiy widget
+          // Opacity(opacity: 0.5,child: Image.asset('assets/images/quiz-logo.png', width: 200,)),
+          
 
-          Image.asset('assets/images/quiz-logo.png', width: 200,),
+          //second way is by using color and then in the color picker using transparency option
+          Image.asset('assets/images/quiz-logo.png', width: 200,color: const Color.fromARGB(132, 255, 255, 255),),
 
           // Image.asset('assets/images/dice-1.png', width: 100,),
 
