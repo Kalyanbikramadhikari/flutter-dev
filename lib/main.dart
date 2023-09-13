@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_practise/gradient_container.dart';
 import 'package:udemy_practise/dice_roller.dart';
+import 'package:udemy_practise/start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -88,7 +89,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: DiceRoller()
+        body: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+              colors: [Colors.deepPurple.shade900, Colors.deepPurple.shade500],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            )),
+            child: Start_Screen())
 
         // This trailing comma makes auto-formatting nicer for build methods.
         );
